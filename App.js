@@ -8,23 +8,14 @@ import Body from "./componentes/Body.js";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.pltaforma = Platform.OS;
-  }
-
-  mostrarConteudo() {
-    return (
-      <>
-        <Header></Header>
-        <Body></Body>
-      </>
-    );
   }
 
   render() {
     return (      
-      <ScrollView style={{ paddingTop: Constants.statusBarHeight,flex: 1 }}>
-        {this.mostrarConteudo()}
-      </ScrollView>
+      // <ScrollView style={{ paddingTop: Constants.statusBarHeight,flex: 1 }}>
+      <View style={{marginTop: 30}}>
+        <Body></Body>
+      </View>
     );
   }
 }
