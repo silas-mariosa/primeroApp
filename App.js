@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Constants from "expo-constants";
 import { AsyncStorage } from "react-native";
@@ -12,6 +13,11 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+=======
+import React, { useState } from "react";
+import Constants from 'expo-constants';
+import { StyleSheet, Text, View, Image, ScrollView, Platform, TouchableOpacity } from "react-native";
+>>>>>>> 752f9a3158c5f5bd900c28d6bfabf0cc6ed4fbea
 import Header from "./componentes/Header.js";
 import Body from "./componentes/Body.js";
 
@@ -19,6 +25,7 @@ export default function App() {
   const [estado, setarEstado] = useState("leitura");
   const [anotacao, setarAnotacao] = useState("");
 
+<<<<<<< HEAD
   useEffect(() => {
     (async () => {
       try {
@@ -98,10 +105,30 @@ export default function App() {
         </TouchableOpacity>
       </View>
     );
+=======
+  const [estado, setarEstado] = useState('leitura');
+  const [anotacao, setarAnotacao] = useState('Minha anotação');
+
+  if(estado == 'leitura'){
+  return (      
+    // <ScrollView style={{ paddingTop: Constants.statusBarHeight,flex: 1 }}>
+    <View style={{paddingTop: Constants.statusBarHeight, flex: 1}}>
+      <View style={styles.header}>
+        <Text style={{textAlign:'center', color:'white'}}>Aplicativo Anotação</Text>
+      </View>
+
+      <View style={{padding:20}}><Text style={styles.anotacao}>{anotacao}</Text></View>
+    <TouchableOpacity><Text>+</Text></TouchableOpacity>
+    </View>
+  );
+  }else if(estado == 'atualizando'){
+
+>>>>>>> 752f9a3158c5f5bd900c28d6bfabf0cc6ed4fbea
   }
 }
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
   header: {
     width: "100%",
     padding: 10,
@@ -144,3 +171,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
+=======
+  header:{
+    width: '100%',
+    padding: 10,
+    backgroundColor: '#069'
+  },
+  anotacao:{
+    fontSize: 14,
+
+  }
+})
+>>>>>>> 752f9a3158c5f5bd900c28d6bfabf0cc6ed4fbea
